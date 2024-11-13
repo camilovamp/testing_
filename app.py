@@ -20,7 +20,7 @@ st.header('Vehicle Price by Manufacturer')
 manufacturer_choise = sorted(df['manufacturer'].unique())
 select_manu = st.multiselect('Select the manufacturer',manufacturer_choise)
 selected_manu = df[df['manufacturer'].isin(select_manu)]
-st.table(selected_manu)
+selected_manu
 if select_manu:
     fig1 = px.histogram(selected_manu, x='price', color='manufacturer')
     fig1.update_yaxes(title_text="Number of Vehicles")
