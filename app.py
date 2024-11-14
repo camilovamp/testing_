@@ -30,7 +30,7 @@ tableview = selected_manu.style.format({
     }).format({
         'model_year': lambda x: f"{x:.0f}"  # Remove commas from years (treated as float/int)
     })
-st.table(tableview)
+tableview
 #st.dataframe(selected_manu)
 if select_manu:
     fig1 = px.histogram(selected_manu, x='price', color='manufacturer')
